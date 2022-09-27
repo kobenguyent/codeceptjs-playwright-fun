@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@reportportal/agent-js-codecept": "^0.2.4",
+    "codeceptjs": "^3.3.5",
+    "playwright": "^1.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  },
+  "name": "codeceptjs-playwright-fun",
+  "version": "1.0.0",
+  "description": "codeceptjs fun with playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "codeceptjs run"
+  },
+  "keywords": [
+    "codeceptjs",
+    "playwright"
+  ],
+  "author": "peterngtr",
+  "license": "ISC"
+}
