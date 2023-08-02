@@ -48,7 +48,7 @@ class CDPHelper extends Helper {
 
     private async getNewCDPSession() {
         const page = this.helpers.Playwright.page;
-        return page.context().newCDPSession(page);
+        return await page.context().newCDPSession(page);
     }
 
     private logWebsocketMessages(message: string): void {
