@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "@reportportal/agent-js-codecept": "^0.2.4",
-    "codeceptjs": "^3.3.5",
+    "allure-codeceptjs": "^2.4.0",
+    "codeceptjs": "3.5.3",
+    "codeceptjs-expect": "^1.0.3",
     "playwright": "^1.26.0"
   },
   "devDependencies": {
@@ -20,6 +22,6 @@
     "codeceptjs",
     "playwright"
   ],
-  "author": "peterngtr",
+  "author": "kobenguyent",
   "license": "ISC"
 }

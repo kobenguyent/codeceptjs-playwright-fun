@@ -1,6 +1,6 @@
 const { I } = inject();
 
-module.exports = {
+export = {
 
   // insert your locators and methods here
     text: {

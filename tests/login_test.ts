@@ -1,6 +1,8 @@
-Feature('login');
+const { I, loginPage} = inject();
 
-Scenario('Incorrect username or password.', ({ I, loginPage }) => {
+xFeature('login');
+
+Scenario('Incorrect username or password.', () => {
     I.amOnPage('/');
     I.click(loginPage.text.signInBtn, '//html/body/div[1]/header');
     I.fillField(loginPage.text.usernameTbx, 'something@totest.com');
