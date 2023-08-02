@@ -16,6 +16,7 @@ export const config: CodeceptJS.MainConfig = {
       show: false,
       browser: 'chromium',
       waitForNavigation: 'load',
+      waitForTimeout: 30_000
     },
     CDPHelper: {
       require: './helpers/CDPHelper.ts'
