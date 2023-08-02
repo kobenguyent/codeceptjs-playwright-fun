@@ -14,7 +14,8 @@ export const config: CodeceptJS.MainConfig = {
     Playwright: {
       url: 'https://github.com',
       show: false,
-      browser: 'chromium'
+      browser: 'chromium',
+      waitForNavigation: 'load',
     },
     CDPHelper: {
       require: './helpers/CDPHelper.ts'
