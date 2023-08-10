@@ -26,7 +26,11 @@ export const config: CodeceptJS.MainConfig = {
     },
     ExpectHelper: {
       require: "codeceptjs-expect"
-    }
+    },
+    REST: {
+      endpoint: 'https://reqres.in',
+      timeout: 20_000
+    },
   },
   include: {
     I: './steps_file.ts',
