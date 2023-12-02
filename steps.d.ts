@@ -7,7 +7,7 @@ type CDPHelper = import('./helpers/CDPHelper');
 
 declare namespace CodeceptJS {
   interface SupportObject { I: I, current: any, loginPage: loginPage }
-  interface Methods extends Playwright, CDPHelper, OpenAI, Expect, REST {}
+  interface Methods extends Playwright, CDPHelper, OpenAI, REST {}
   interface I extends ReturnType<steps_file>, WithTranslation<Methods> {}
   namespace Translation {
     interface Actions {}
