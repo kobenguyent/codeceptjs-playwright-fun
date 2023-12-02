@@ -13,5 +13,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - run: npm i
+      - run: npm i && npx codeceptjs def
       - run: npm test
