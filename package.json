@@ -2,7 +2,7 @@
   "dependencies": {
     "@reportportal/agent-js-codecept": "^0.2.4",
     "allure-codeceptjs": "^2.4.0",
-    "codeceptjs": "3.5.3",
+    "codeceptjs": "3.5.8",
     "codeceptjs-expect": "^1.0.3",
     "codeceptjs-rest-demo": "^1.1.3",
     "playwright": "^1.26.0"
