@@ -13,5 +13,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18
-      - run: npm i
+      - run: npm i && npx playwright install
       - run: npx codeceptjs def && npm test
