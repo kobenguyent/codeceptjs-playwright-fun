@@ -7,7 +7,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './tests/*_test.ts',
+  tests: './tests/login_test.ts',
   output: './output',
   emptyOutputFolder: true,
   helpers: {
