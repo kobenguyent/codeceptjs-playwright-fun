@@ -24,9 +24,7 @@ export const config: CodeceptJS.MainConfig = {
     OpenAI: {
       chunkSize: 8000
     },
-    ExpectHelper: {
-      require: "codeceptjs-expect"
-    },
+    Expect: {},
     REST: {
       endpoint: 'https://reqres.in',
       timeout: 20_000
