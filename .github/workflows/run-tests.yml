@@ -1,17 +1,36 @@
 name: Run Tests
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [**]
 
 jobs:
-  build:
-
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 18
-        uses: actions/setup-node@v1
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
-      - run: npm i && npx playwright install
-      - run: npx codeceptjs def && npm test
+          node-version: 20
+
+      - name: 📦 Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Install dependencies & Playwright
+        run: npm ci && npx playwright install
+
+      - name: 🧪 Run CodeceptJS Definitions & Tests
+        run: |
+          npx codeceptjs def
+          npm test
