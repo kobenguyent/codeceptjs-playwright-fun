@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: 📦 Install dependencies & Playwright
-        run: npm ci && npx playwright install
+        run: npm i && npx playwright install
 
       - name: 🧪 Run CodeceptJS Definitions & Tests
         run: |
